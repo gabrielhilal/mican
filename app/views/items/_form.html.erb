@@ -1,0 +1,55 @@
+<%= form_for([@order, @item]) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <div class="field">
+    <%= f.label :style %><br />
+    <%= f.text_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :construction %><br />
+    <%= f.text_field :construction %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br />
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :cases %><br />
+    <%= f.text_field :cases %>
+  </div>
+  <div class="field">
+    <%= f.label :size36 %><br />
+    <%= f.text_field :size36 %>
+  </div>
+  <div class="field">
+    <%= f.label :size37 %><br />
+    <%= f.text_field :size37 %>
+  </div>
+  <div class="field">
+    <%= f.label :size38 %><br />
+    <%= f.text_field :size38 %>
+  </div>
+  <div class="field">
+    <%= f.label :size39 %><br />
+    <%= f.text_field :size39 %>
+  </div>
+  <div class="field">
+    <%= f.label :size40 %><br />
+    <%= f.text_field :size40 %>
+  </div>
+  <div class="field">
+    <%= f.label :size41 %><br />
+    <%= f.text_field :size41 %>
+  </div>
+  <div class="field">
+    <%= f.label :pairs %><br />
+    <%= f.text_field :pairs %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

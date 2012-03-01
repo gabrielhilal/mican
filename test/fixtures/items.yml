@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  style: MyString
+  construction: MyString
+  material: MyString
+  cases: MyString
+  size36: MyString
+  size37: MyString
+  size38: MyString
+  size39: MyString
+  size40: MyString
+  size41: MyString
+  pairs: MyString
+  price: 9.99
+
+two:
+  style: MyString
+  construction: MyString
+  material: MyString
+  cases: MyString
+  size36: MyString
+  size37: MyString
+  size38: MyString
+  size39: MyString
+  size40: MyString
+  size41: MyString
+  pairs: MyString
+  price: 9.99

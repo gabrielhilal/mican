@@ -1,0 +1,45 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Style</th>
+    <th>Construction</th>
+    <th>Material</th>
+    <th>Cases</th>
+    <th>Size36</th>
+    <th>Size37</th>
+    <th>Size38</th>
+    <th>Size39</th>
+    <th>Size40</th>
+    <th>Size41</th>
+    <th>Pairs</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.style %></td>
+    <td><%= item.construction %></td>
+    <td><%= item.material %></td>
+    <td><%= item.cases %></td>
+    <td><%= item.size36 %></td>
+    <td><%= item.size37 %></td>
+    <td><%= item.size38 %></td>
+    <td><%= item.size39 %></td>
+    <td><%= item.size40 %></td>
+    <td><%= item.size41 %></td>
+    <td><%= item.pairs %></td>
+    <td><%= item.price %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_item_path %>

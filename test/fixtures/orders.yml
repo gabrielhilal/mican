@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: MyString
+  currency: MyString
+  terms: MyString
+  client_id: 1
+
+two:
+  number: MyString
+  currency: MyString
+  terms: MyString
+  client_id: 1

@@ -15,19 +15,36 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @order = Order.find(params[:order_id])
     @item = Item.find(params[:id])
   end
 
   def create
-    @item = Item.new(params[:item])
+    @order = Order.find(params[:order_id])
+    @item = @order.items.build(params[:item])
+    if @item.save
+      flash[:success] = "Item created!"
+      redirect_to order_path (@order)
+    else
+      render 'new'
+    end
   end
 
   def update
+    @order = Order.find(params[:order_id])
     @item = Item.find(params[:id])
+    if @item.update_attributes(params[:item])
+      flash[:success] = "Item updated!"
+      redirect_to order_path (@order)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-    @item = Item.find(params[:id])
-    @item.destroy
+    @order = Order.find(params[:order_id])
+    Item.find(params[:id]).destroy
+    flash[:success] = "Item deleted!"
+    redirect_to order_path (@order)
   end
 end

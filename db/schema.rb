@@ -20,26 +20,25 @@ ActiveRecord::Schema.define(:version => 20120301180554) do
     t.string   "phone"
     t.string   "email"
     t.string   "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "items", :force => true do |t|
     t.string   "style"
     t.string   "construction"
     t.string   "material"
-    t.string   "cases"
-    t.string   "size36"
-    t.string   "size37"
-    t.string   "size38"
-    t.string   "size39"
-    t.string   "size40"
-    t.string   "size41"
-    t.string   "pairs"
+    t.integer  "cases"
+    t.integer  "size36"
+    t.integer  "size37"
+    t.integer  "size38"
+    t.integer  "size39"
+    t.integer  "size40"
+    t.integer  "size41"
     t.decimal  "price"
     t.integer  "order_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "orders", :force => true do |t|
@@ -47,8 +46,8 @@ ActiveRecord::Schema.define(:version => 20120301180554) do
     t.string   "currency"
     t.string   "terms"
     t.integer  "client_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

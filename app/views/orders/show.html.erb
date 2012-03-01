@@ -1,25 +1,69 @@
-<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <td></td>
+    <td class="align_right"><%= link_to 'edit order', edit_order_path(@order) %></td>
+  </tr>
+  <tr>
+    <td><strong>Number:</strong></td>
+    <td><%= @order.number %></td>
+  </tr>
+  <tr>
+    <td><strong>Client:</strong></td>
+    <td><%= @order.client.name %></td>
+  </tr>
+  <tr>
+    <td><strong>Currency:</strong></td>
+    <td><%= @order.currency %></td>
+  </tr>
+  <tr>
+    <td><strong>Terms:</strong></td>
+    <td><%= @order.terms %></td>
+  </tr>
+</table>
+<p>Items:</p>
+<table>
+  <tr>
+    <th rowspan="2">Style</th>
+    <th rowspan="2">Construction</th>
+    <th rowspan="2">Material/<br />Colour</th>
+    <th rowspan="2">Cases</th>
+    <th colspan="6">Size Run - European Sizes</th>
+    <th rowspan="2">Total<br />Pairs</th>
+    <th rowspan="2">Price</th>
+    <th rowspan="2">Total</th>
+    <td rowspan="2"></td>
+    <td rowspan="2"></td>
+  </tr>
+  <tr>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+  </tr>
+  <tr>
+    <% @order.items.each do |item| %>
+    <td><%= item.style %></td>
+    <td><%= item.construction %></td>
+    <td><%= item.material %></td>
+    <td><%= item.cases %></td>
+    <td><%= item.size36 %></td>
+    <td><%= item.size37 %></td>
+    <td><%= item.size38 %></td>
+    <td><%= item.size39 %></td>
+    <td><%= item.size40 %></td>
+    <td><%= item.size41 %></td>
+    <td><%= item.size36.to_i + item.size37.to_i + item.size38.to_i + item.size39.to_i + item.size40.to_i + item.size41.to_i %></td>
+    <td><%= number_with_precision item.price, :precision => 2, :delimiter => ',' %></td>
+    <td><%= number_with_precision item.price.to_i * (item.size36.to_i + item.size37.to_i + item.size38.to_i + item.size39.to_i + item.size40.to_i + item.size41.to_i), :precision => 2, :delimiter => ',' %></td>
+    <td><%= link_to 'edit', edit_order_item_path(@order, item) %></td>
+    <td><%= link_to 'delete', order_item_path(@order, item), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+    <% end %>
+</table>
 
-<p>
-  <b>Number:</b>
-  <%= @order.number %>
-</p>
+<p><%= link_to 'New item', new_order_item_path(@order) %></p>
 
-<p>
-  <b>Currency:</b>
-  <%= @order.currency %>
-</p>
 
-<p>
-  <b>Terms:</b>
-  <%= @order.terms %>
-</p>
 
-<p>
-  <b>Client:</b>
-  <%= @order.client_id %>
-</p>
-<td><%= link_to 'New item', new_order_item_path(@order) %></td>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>

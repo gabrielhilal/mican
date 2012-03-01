@@ -1,35 +1,31 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @client.name %>
-</p>
+<table>
+  <tr>
+    <td><%= link_to 'Edit client', edit_client_path(@client) %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Name:</strong></td>
+    <td><%= @client.name %></td>
+  </tr>
+  <tr>
+    <td><strong>Buyer:</strong></td>
+    <td><%= @client.buyer %></td>
+  </tr>
+  <tr>
+    <td><strong>Address:</strong></td>
+    <td><%= simple_format(@client.address) %></td>
+  </tr>
+  <tr>
+    <td><strong>Phone:</strong></td>
+    <td><%= @client.phone %></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td>
+    <td><%= @client.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Comments:</strong></td>
+    <td><%= simple_format(@client.comments) %></td>
+</table>
 
-<p>
-  <b>Buyer:</b>
-  <%= @client.buyer %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @client.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @client.phone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @client.email %>
-</p>
-
-<p>
-  <b>Comments:</b>
-  <%= @client.comments %>
-</p>
-
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>

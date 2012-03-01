@@ -4,14 +4,13 @@ class CreateItems < ActiveRecord::Migration
       t.string :style
       t.string :construction
       t.string :material
-      t.string :cases
-      t.string :size36
-      t.string :size37
-      t.string :size38
-      t.string :size39
-      t.string :size40
-      t.string :size41
-      t.string :pairs
+      t.integer :cases
+      t.integer :size36
+      t.integer :size37
+      t.integer :size38
+      t.integer :size39
+      t.integer :size40
+      t.integer :size41
       t.decimal :price
       t.integer :order_id
 

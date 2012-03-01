@@ -1,6 +1,6 @@
 <%= form_for([@order, @item]) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-
+<div id="form_left">
   <div class="field">
     <%= f.label :style %><br />
     <%= f.text_field :style %>
@@ -17,6 +17,12 @@
     <%= f.label :cases %><br />
     <%= f.text_field :cases %>
   </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+</div>
+<div id="form_right">
   <div class="field">
     <%= f.label :size36 %><br />
     <%= f.text_field :size36 %>
@@ -41,14 +47,8 @@
     <%= f.label :size41 %><br />
     <%= f.text_field :size41 %>
   </div>
-  <div class="field">
-    <%= f.label :pairs %><br />
-    <%= f.text_field :pairs %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
+</div>
+<div class="clear"></div>
   <div class="actions">
     <%= f.submit %>
   </div>

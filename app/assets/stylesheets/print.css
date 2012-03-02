@@ -1,9 +1,5 @@
-body {
-	font:70% Verdana,Tahoma,Arial,sans-serif;
-	background:#000000;
-    margin: 10px;
-    padding: 0;
-	}
+body {margin:0; padding:0; line-height: 1.4em; word-spacing:1px; letter-spacing:0.2px; font: 13px Arial, Helvetica,"Lucida Grande", serif; color: #000;}
+
 
 /* Main layout*/
 #wrap {
@@ -20,65 +16,12 @@ header {
     margin: 0 1px;
     }
 .align_right {
-    float: right;
+    display: none;
     }
 
 /*menu */
 nav {
-	background:#ffffff;
-	float:left;
-	width:800px;
-	text-align:center;
-	}
-nav ul {
-	list-style:none;
-	margin:0;
-	padding:0;
-	}
-nav li {
-	float:left;
-	}
-nav li a {
-    display:block;
-    border: 1px solid #000000;
-    color: #000000;
-	font-size:1.2em; 
-	margin:1px; 
-	padding:5px 20px 5px 20px;
-	text-decoration:none;
-	}
-nav li a:hover {
-	background: #000000;
-    border: 1px solid #000000;
-    color: #ffffff;
-	text-decoration:none;
-	}
-nav li ul {
-    text-align:left;
-	display:none;
-	position:absolute;
-	}
-nav li:hover ul{
-	display:block;
-	background: #ffffff;
-    border: 1px solid #000000;
-    color: #000000;
-	text-decoration:none;
-	}
-nav li li {
-	display:block;
-	float:none;
-	}
-nav li ul a{
-	display:block;
-	}
-nav li ul a:hover{
-    border: 1px solid #000000;
-    color: #ffffff;
-	font-size:1.2em; 
-	margin:1px; 
-	padding:5px 20px 5px 20px;
-	text-decoration:none;
+display: none;
 	}
 
 /* Contents */
@@ -209,48 +152,6 @@ td {
 .space{
     padding-left: 20px;
     }
-
-/* flash and errors */
-.success {
-    background:#e6efc2;
-    color:#264409;
-    border-color:#c6d880;
-    font-size:2em;
-    }
-.error {
-    background:#cccccc;
-    color:#ff3333;
-    border-color:#ff3333;
-    font-size:2em;
-    }
-.field_with_errors {
-    background-color: #ff3333;
-    display: table;
-    }
-.field_with_errors label {
-    color: #ff3333;
-    background-color: #ffffff;
-    }
-#error_explanation {
-    width: 400px;
-    border: 2px solid #ff3333;
-    margin-bottom: 20px;
-    background-color: #cccccc;
-    }
-
-/*hover to display*/
-.showhim {
-    cursor: help;
-    }
-.showme {
+a {
     display: none;
-    position: absolute;
-    margin-left: 40px;
-    margin-top: -30px;
-    background: #999999;
-    padding: 5px;
-    border-radius: 10px;
-    }
-.showhim:hover .showme {
-    display: block;
-	}
+}

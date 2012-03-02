@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <td><strong>Terms:</strong></td>
-    <td><%= @order.terms %></td>
+    <td><%= simple_format(@order.terms) %></td>
   </tr>
 </table>
 <p>Items:</p>
@@ -61,9 +61,30 @@
     <td><%= link_to 'delete', order_item_path(@order, item), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
     <% end %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong><%= @order.items.sum("size36 + size37 + size38 + size39 + size40 + size41") %></strong></td>
+    <td></td>
+    <td><strong><%= number_with_precision @order.items.sum("(size36 + size37 + size38 + size39 + size40 + size41) * price"), :precision => 2, :delimiter => ',' %></strong></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
 <p><%= link_to 'New item', new_order_item_path(@order) %></p>
 
-
+<div class="align_right">
+<input type="button"
+  onClick="window.print()"
+  value="Print Order"/>
+</div>
 

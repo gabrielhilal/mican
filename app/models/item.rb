@@ -4,5 +4,11 @@ class Item < ActiveRecord::Base
 
   validates :style, :presence => true
   validates :price, :presence => true
+  validates :size36, :presence => true
+  validates :size37, :presence => true
+  validates :size38, :presence => true
+  validates :size39, :presence => true
+  validates :size40, :presence => true
+  validates :size41, :presence => true
 
 end

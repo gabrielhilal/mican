@@ -12,12 +12,6 @@ class ItemsController < ApplicationController
   def new
     @order = Order.find(params[:order_id])
     @item = @order.items.build
-    @item.size36 ||= "0"
-    @item.size37 ||= "0"
-    @item.size38 ||= "0"
-    @item.size39 ||= "0"
-    @item.size40 ||= "0"
-    @item.size41 ||= "0"
   end
 
   def edit

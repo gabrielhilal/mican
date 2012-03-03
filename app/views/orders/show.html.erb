@@ -55,8 +55,16 @@
     <td><%= item.size40 %></td>
     <td><%= item.size41 %></td>
     <td><%= item.size36.to_i + item.size37.to_i + item.size38.to_i + item.size39.to_i + item.size40.to_i + item.size41.to_i %></td>
-    <td><%= number_with_precision item.price, :precision => 2, :delimiter => ',' %></td>
+        <% @temp= 0 %>
+        <% price = item.price %>
+        <% if price == 0 %>
+        <% @temp= 1 %>
+    <td>TBC</td>
+    <td>TBC</td>
+        <% else %>
+    <td><%= number_with_precision price, :precision => 2, :delimiter => ',' %></td>
     <td><%= number_with_precision item.price.to_i * (item.size36.to_i + item.size37.to_i + item.size38.to_i + item.size39.to_i + item.size40.to_i + item.size41.to_i), :precision => 2, :delimiter => ',' %></td>
+        <% end %>
     <td><%= link_to 'edit', edit_order_item_path(@order, item) %></td>
     <td><%= link_to 'delete', order_item_path(@order, item), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -74,7 +82,12 @@
     <td></td>
     <td><strong><%= @order.items.sum("size36 + size37 + size38 + size39 + size40 + size41") %></strong></td>
     <td></td>
-    <td><strong><%= number_with_precision @order.items.sum("(size36 + size37 + size38 + size39 + size40 + size41) * price"), :precision => 2, :delimiter => ',' %></strong></td>
+         <% tprice= @order.items.sum("(size36 + size37 + size38 + size39 + size40 + size41) * price") %>
+         <% if @temp == 1 %>
+    <td><strong>TBC</strong></td>
+         <% else %>
+    <td><strong><%= number_with_precision tprice , :precision => 2, :delimiter => ',' %></strong></td>
+         <% end %>
     <td></td>
     <td></td>
   </tr>

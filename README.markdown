@@ -1,5 +1,5 @@
 # STUDIO TMLS - Order Pad
-<p>Application developed in few hours as an urgent request in order to allow the company to register new orders and clients at Mican Fair in Italy.</p>
+<p>Application developed in a couple of hours as an urgent request. The system has allowed STUDIO TMLS to register new clients and orders during the Mican Fair 2012 in Milan/Italy.</p>
  
 Application available at: [*http://mican.herokuapp.com*](http://mican.herokuapp.com)
 

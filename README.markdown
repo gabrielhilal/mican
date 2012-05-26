@@ -1,7 +1,5 @@
-# Final Year Project (FYP)
-## Web Based Information System for STUDIO TMLS: Adapting to Organisational Change
-### STUDIO TMLS - Order Pad
-## Application developed in few hours as an urgent request in order to allow the company to register new orders and clients at Mican Fair in Italy.
+# STUDIO TMLS - Order Pad
+<p>Application developed in few hours as an urgent request in order to allow the company to register new orders and clients at Mican Fair in Italy.</p>
  
 Application available at: [*http://mican.herokuapp.com*](http://mican.herokuapp.com)
 

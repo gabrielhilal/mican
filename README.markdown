@@ -1,5 +1,5 @@
 # STUDIO TMLS - Order Pad
-Application created in <strong> Ruby on Rails</strong>, developed in a couple of hours as an urgent request. The system has allowed STUDIO TMLS to register new clients and orders during the Mican Fair 2012 in Milan/Italy.<br /><br />
+Application created in <strong> Ruby on Rails</strong>, developed in a couple of hours as an urgent request. The system has allowed STUDIO TMLS to register new clients and orders during the Mican Fair 2012 in Milan/Italy.
  
 <strong>Application available at: [*http://mican.herokuapp.com*](http://mican.herokuapp.com)</strong>
 

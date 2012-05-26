@@ -10,7 +10,7 @@ Login Details:
     <th>Username</th><th>Password</th>
   </tr>
   <tr>
-    <td>tmls</td><td>tmls</td><td>
+    <td>tmls</td><td>tmls</td>
   </tr>
 </table>
 
